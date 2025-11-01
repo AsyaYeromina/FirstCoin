@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './WelcomeScreen.scss';
 
-const WelcomeScreen = ({ onAnimationEnd }) => {
+interface WelcomeScreenProps {
+   onAnimationEnd: () => void;
+}
+
+const WelcomeScreen = ({ onAnimationEnd }: WelcomeScreenProps) => {
   const [show, setShow] = useState(true);
   const [animateLogo, setAnimateLogo] = useState(false);
   const [animateTitle, setAnimateTitle] = useState(false);
@@ -13,9 +17,7 @@ const WelcomeScreen = ({ onAnimationEnd }) => {
 
     const timer = setTimeout(() => {
       setShow(false);
-      if (onAnimationEnd) {
-        onAnimationEnd();
-      }
+      onAnimationEnd();
     }, 3000);
 
     return () => clearTimeout(timer);

@@ -1,0 +1,102 @@
+.storage {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 24px;
+   justify-content: flex-start;
+   margin-top: 60px;
+   width: 100%;
+}
+
+.storage__coins-container {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+   gap: 8px;
+   margin-top: 10px;
+   width: 80%;
+   margin: 10px auto 0;
+   container-type: inline-size;
+}
+
+.storage__coin {
+   width: 100%;
+   aspect-ratio: 1;
+   min-width: 10px;
+}
+
+.storage__coin--yellow-circle {
+   background-color: gold;
+   border-radius: 50%;
+   width: 100%;
+   height: 100%;
+   display: inline-block;
+}
+
+.storage__coin-img {
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+
+.storage__input-wrapper {
+   display: flex;
+   align-items: stretch;
+   gap: 10px;
+
+}
+
+.storage__coin-input {
+   padding: 10px 15px;
+   background-color: transparent;
+   border: 2px solid gold;
+   padding: 12px 24px;
+   text-align: center;
+   border-radius: 5px;
+   color: gold;
+   font-size: 1.5em;
+   outline: none;
+   flex: 1;
+   max-width: 200px;
+   -moz-appearance: textfield;
+}
+
+.storage__coin-input::-webkit-outer-spin-button,
+.storage__coin-input::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+}
+
+.storage__coin-input::placeholder {
+   color: rgba(255, 215, 0, 0.7);
+}
+
+.storage__button {
+   width: 40px;
+   height: 100%;
+   background-color: gold;
+   border: 2px solid rgba(255, 217, 0, 0.741);
+   border-radius: 5px;
+   color: #a47220;
+   font-size: 1.5em;
+   font-weight: bold;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.2s ease;
+   outline: none;
+}
+
+.storage__button:hover {
+   background-color: rgba(255, 215, 0, 0.1);
+   transform: scale(1.05);
+}
+
+.storage__button:active {
+   transform: scale(0.95);
+}
+
+.storage__button:disabled {
+   opacity: 0.5;
+   cursor: not-allowed;
+}
